@@ -69,7 +69,7 @@ function viewActivity(){
     $result = mysqli_query($conn, $query) or die("Query failed:" . mysqli_error($conn));
     
     while ($row = mysqli_fetch_assoc($result)) {
-        $title = htmlspecialchars($row['title']);
+        $title = htmlspecialchars($row['tilte']);
         $description = htmlspecialchars($row['description']);
         $image = htmlspecialchars($row['image']);
         $date = htmlspecialchars($row['date']);
@@ -111,7 +111,7 @@ function viewActivityPub(){
     $result = mysqli_query($conn, $query) or die("Query failed:" . mysqli_error($conn));
     
     while ($row = mysqli_fetch_assoc($result)) {
-        $title = htmlspecialchars($row['title']);
+        $title = htmlspecialchars($row['tilte']);
         $description = htmlspecialchars($row['description']);
         $image = htmlspecialchars($row['image']);
         $date = htmlspecialchars($row['date']);
