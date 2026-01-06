@@ -20,11 +20,13 @@ A comprehensive web-based management system for Forqan Quran Center, featuring s
 - ✅ Added input sanitization and validation
 
 ### Bug Fixes
-- ✅ Fixed typo in database column reference ('tilte' → 'title')
+- ✅ Fixed typo in code that referenced database column incorrectly
 - ✅ Fixed duplicate field display in activity listings
 - ✅ Fixed CSS typo ('carsor' → 'cursor')
 - ✅ Removed duplicate/incomplete code blocks
 - ✅ Added UTF-8 charset support for proper Arabic text handling
+
+**Note**: The database column 'tilte' is a typo in the database schema itself, but we maintain it for backward compatibility. Future database migration should rename it to 'title'.
 
 ### Code Quality
 - ✅ Improved code structure and organization
@@ -82,10 +84,23 @@ A comprehensive web-based management system for Forqan Quran Center, featuring s
 
 ⚠️ **Important**: 
 - Change default database credentials in production
+- **CRITICAL**: Implement password hashing - the current system stores passwords in plain text
+  - Use PHP's `password_hash()` for storing passwords
+  - Use `password_verify()` for checking passwords
 - Use strong passwords for all user accounts
 - Keep PHP and MySQL updated
 - Enable HTTPS for production deployment
 - Regular backups are recommended
+- Validate and sanitize all user inputs
+- Implement rate limiting for login attempts
+
+## Known Issues & Future Improvements
+
+1. **Password Security**: Passwords are currently stored in plain text. Implement bcrypt/argon2 hashing ASAP.
+2. **Database Schema**: Column 'tilte' should be renamed to 'title' in the activity table (requires database migration).
+3. **Input Validation**: Add comprehensive server-side validation for all forms.
+4. **Session Security**: Implement session timeout and regeneration.
+5. **File Upload**: If file uploads are added, implement proper validation and sanitization.
 
 ## Arabic Language Support
 
