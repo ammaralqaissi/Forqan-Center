@@ -18,7 +18,7 @@
             background: linear-gradient(to bottom,  #D1D9E1,#217b8f)
             }
             a img:hover {
-              carsor:pointer;
+              cursor:pointer;
             }
     </style>
 </head>
@@ -66,17 +66,3 @@
 </section>
 </body>
 </html>
-
-
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $name=$_POST['email'];
-  $pass=$_POST['password'];
-  $conn = mysqli_connect("localhost:3307", "root", "", "forqancentre") or die("Couldn't connect to server");
-  $query = "SELECT * FROM `user` WHERE name = '$name' AND password = '$pass' ";
-  $result = mysqli_query($conn, $query) or die("Query failed:" . mysqli_error($conn));
-
-  //echo "correct";
-
-
-}
