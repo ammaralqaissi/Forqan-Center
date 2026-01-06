@@ -18,7 +18,7 @@
             background: linear-gradient(to bottom,  #D1D9E1,#217b8f)
             }
             a img:hover {
-              carsor:pointer;
+              cursor:pointer;
             }
     </style>
 </head>

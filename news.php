@@ -65,12 +65,13 @@ function viewActivity(){
     $result = mysqli_query($conn, $query) or die("Query failed:" . mysqli_error($conn));
     
     while ($row = mysqli_fetch_assoc($result)) {
-        $title = $row['tilte'];
+        $title = $row['title'];
         $description = $row['description'];
         $image = $row['image'];
         $date=$row['date'];
         $time=$row['time'];
         $level=$row['targeted_student'];
+        $location=$row['location'];
         echo '<div class="single-testimonial-box">
                 <div class="testimonial-description">
                     <div class="testimonial-title">'.$title.'</div>
@@ -87,7 +88,7 @@ function viewActivity(){
                     </div>
                     <br>
                     <div class="dateAct">
-                        <div class="act">الموقع : <span>'.$level.'</span></div>
+                        <div class="act">الموقع : <span>'.$location.'</span></div>
                         <div class="act">الفئة : <span>'.$level.'</span></div>
                     </div>
                     <div class="testimonial-comment">
@@ -105,12 +106,13 @@ function viewActivity(){
         $result = mysqli_query($conn, $query) or die("Query failed:" . mysqli_error($conn));
         
         while ($row = mysqli_fetch_assoc($result)) {
-            $title = $row['tilte'];
+            $title = $row['title'];
             $description = $row['description'];
             $image = $row['image'];
             $date=$row['date'];
             $time=$row['time'];
             $level=$row['targeted_student'];
+            $location=$row['location'];
             $id=$row['ID_activity'];
             echo '<div class="single-testimonial-box">
                     <div class="testimonial-description">
@@ -128,7 +130,7 @@ function viewActivity(){
                         </div>
                         <br>
                         <div class="dateAct">
-                            <div class="act">الموقع : <span>'.$level.'</span></div>
+                            <div class="act">الموقع : <span>'.$location.'</span></div>
                             <div class="act">الفئة : <span>'.$level.'</span></div>
                         </div>
                         <div class="testimonial-comment">
