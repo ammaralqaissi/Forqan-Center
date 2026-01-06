@@ -1,0 +1,45 @@
+# PHP
+*.log
+.htaccess
+
+# Database
+*.sql
+*.sqlite
+*.db
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Environment and config (if you add these later)
+.env
+config.local.php
+
+# Uploads directory (if you add this later)
+uploads/
+files/
+
+# Cache
+cache/
+*.cache
+
+# Node modules (if you add frontend build tools)
+node_modules/
+package-lock.json
+
+# Composer (if you add it)
+vendor/
+composer.lock
+
+# Backups
+*.bak
+*.backup
